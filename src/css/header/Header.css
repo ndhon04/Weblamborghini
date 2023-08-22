@@ -1,0 +1,165 @@
+.navbar {
+  background: var(--black);
+  width: 100%;
+  z-index: 1;
+  text-transform: uppercase;
+  position: fixed;
+}
+
+.navbar a,
+.navbar-text {
+  color: var(--white) !important;
+  font-size: 1.2rem;
+  margin-left: 20px;
+  font-weight: 100;
+}
+
+.navbar-text > .nav-link {
+  border: 1px solid gray;
+  padding: 8px;
+  border-radius: 5px;
+}
+.bd-icon {
+  border: 1px solid gray;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right:20px;
+}
+
+.bf {
+  position: relative;
+}
+
+.bf::before {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: var(--white);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.navbar > .container-fluid {
+  --bs-gutter-x: 8rem;
+}
+
+.nav-item:hover .bf::before {
+  width: 100%;
+  transition: 1s;
+}
+
+.navbar svg {
+  font-size: 30px;
+}
+
+.banner {
+  width: 100%;
+  height: 40rem;
+}
+video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -999;
+}
+.content-header{
+    position: absolute;
+    top:23%;
+    left: 10%;
+    color: var(--white);
+    text-transform: uppercase;
+}
+.content-header h2{
+    padding: 0 0 0 5px;
+}
+.content-header h1{
+    font-size: 6rem;
+    line-height: 0.9;
+    width: 200px;
+    font-weight: 700;
+}
+
+.banner .btn-dropDown{
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.banner .btn-dropDown .btn-icon1{
+    transform: translate(-50%, -50%);
+    font-size: 5.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.banner .btn-dropDown .btn-icon2{
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1.4rem;
+    animation: drop 1s linear infinite
+}
+
+.navbar-collapse li:hover h2{
+    color: red;
+}
+
+.banner .btn-dropDown:hover .btn-icon2{
+  color: black;
+}
+/* .select-models{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  text-transform: uppercase;
+  z-index:99 ;
+  background: gray;
+  /* transform: translateY(100%); 
+} */
+
+.btn-models:hover .content-header h1{
+  color:aqua;
+} 
+.list-group{
+  --bs-list-group-color: var(--white) !important;
+  --bs-list-group-bg: var(--black) !important;
+  --bs-list-group-border-color: none !important;
+    --bs-list-group-item-padding-x: 16.2rem !important;
+    --bs-list-group-item-padding-y:0.8rem !important;
+    --bs-list-group-border-radius:none !important;
+  }
+
+@keyframes drop {
+    0%{
+        top: 40%;
+    }
+    100%{
+top:60%
+    }
+}
+
+@media screen and (max-width:37.5em){
+  .content-header h1{
+    font-size: 3rem;  
+  }
+  .content-header h2{
+    font-size: 1rem;
+  }
+  .navbar > .container-fluid {
+    --bs-gutter-x: 1rem;
+  }
+
+  .nav-item:hover .bf::before {
+     width: 0;
+  }
+}
